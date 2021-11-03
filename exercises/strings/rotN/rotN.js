@@ -31,8 +31,8 @@ function rotN(string, N) {
     if (isLetter(char))
     {
       let code = char.charCodeAt(0);
-      let shiftedChar = String.fromCharCode(code + N)
-      encryptedString += (isLetter(shiftedChar) ? shiftedChar :String.fromCharCode( shiftedChar.charCodeAt() - 26 ));
+      let shiftedChar = String.fromCharCode(code + N);
+      encryptedString += (shiftedChar.charCodeAt(0) < (code > 96 ? 123 : 91) ? shiftedChar : String.fromCharCode( shiftedChar.charCodeAt() - 26 ));
     }
     else
     {
