@@ -21,8 +21,20 @@
  * @param {number} n - A non-negative integer
  * @returns {number} The fibonacci of num
  */
-function fibonacci(n) {
-  // This is your job. :)
+const fibonacci = (n, memo = {}) => {
+  if (n < 0) {
+    return 'invalid number';
+  }
+  if (n < 1) {
+    return 0;
+  }
+  if (n < 2) {
+    return 1;
+  }
+  if (memo[n]) {
+    return memo[n];
+  }
+  return memo[n] = fibonacci(n - 1, memo) + fibonacci(n -2, memo);
 }
 
 if (require.main === module) {
