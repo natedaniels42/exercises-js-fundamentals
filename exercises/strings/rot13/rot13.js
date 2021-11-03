@@ -44,8 +44,8 @@ function rot13(string) {
     if (isLetter(char))
     {
       let code = char.charCodeAt(0);
-      let shiftedChar = String.fromCharCode(code + 13)
-      encryptedString += (isLetter(shiftedChar) ? shiftedChar :String.fromCharCode( shiftedChar.charCodeAt() - 26 ));
+      let shiftedChar = String.fromCharCode(code + 13);
+      encryptedString += (shiftedChar.charCodeAt(0) < (code > 96 ? 123 : 91) ? shiftedChar : String.fromCharCode( shiftedChar.charCodeAt() - 26 ));
     }
     else
     {
@@ -64,6 +64,7 @@ if (require.main === module) {
 
   console.log(rot13('Running sanity checks for rot13:'));
   console.log(rot13('Hello, world!'));
+  console.log(rot13('Uryyb, jbeyq!'));
 }
 
 module.exports = rot13;
