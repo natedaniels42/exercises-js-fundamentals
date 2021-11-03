@@ -24,16 +24,18 @@
 function countLetter(string, letter) {
   // This is your job. :)
 
-  let count = 0;
+  return string.split("").filter(char=> char === letter).length;
 
-  for (let i = 0; i < string.length; i++) {
-    if (string[i] == letter)
-    {
-      count++;
-    }
-  }
+  // let count = 0;
 
-  return count;
+  // for (let i = 0; i < string.length; i++) {
+  //   if (string[i] == letter)
+  //   {
+  //     count++;
+  //   }
+  // }
+
+  // return count;
 }
 
 if (require.main === module) {

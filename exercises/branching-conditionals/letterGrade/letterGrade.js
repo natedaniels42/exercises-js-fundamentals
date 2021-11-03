@@ -22,6 +22,10 @@ function letterGrade(percentGrade) {
   {
     return "F";
   }
+  if (percentGrade == 100)
+  {
+    return "A+";
+  }
   if (percentGrade > 90)
   {
     grade = "A";
