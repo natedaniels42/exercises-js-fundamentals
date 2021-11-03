@@ -15,8 +15,8 @@
  * @returns {boolean} The index of the last occurrence of the value in the
  *  array, or -1 if it's not found.
  */
-function lastIndexOf(haystack, needle) {
-  // This is your job. :)
+const lastIndexOf = (haystack, needle) => {
+  return haystack.lastIndexOf(needle);
 }
 
 if (require.main === module) {
