@@ -11,8 +11,8 @@
  * @returns {boolean} True if every number in the input array is positive
  *   and false otherwise.
  */
-function allPositive(array) {
-  // This is your job. :)
+const allPositive = (array) => {
+  return array.every(item > 0);
 }
 
 if (require.main === module) {
