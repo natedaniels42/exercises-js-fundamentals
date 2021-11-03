@@ -32,6 +32,5 @@ if (require.main === module) {
   // How else will you be sure your code does what you think it does?
 }
 
-console.log(concat([1,2,3], [4,5,6]))
 
 module.exports = concat;
