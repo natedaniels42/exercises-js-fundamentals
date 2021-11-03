@@ -33,6 +33,10 @@ function rockPaperScissorsWinner(array) {
   }
   else if (array[0] > array[1])
   {
+    if (array[0] == 2 && array[2] == 0)
+    {
+      return "win";
+    }
     return "loss";
   }
   else
