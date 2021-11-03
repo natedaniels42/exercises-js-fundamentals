@@ -19,13 +19,12 @@
  * @returns {boolean} True if `num` is a perfect square and false otherwise.
  */
 
-function isPerfectSquare(num) {
-  // A negative number can't be a perfect square, so immediately return false.
+const isPerfectSquare = (num) => {
   if (num < 0) {
     return false;
   }
 
-  // The rest is your job. :)
+  return (num ** (1 / 2)) % 1 === 0; 
 }
 
 if (require.main === module) {
