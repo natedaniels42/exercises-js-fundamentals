@@ -13,12 +13,8 @@
  * @param {number} num The input number
  * @returns {boolean} True if num is even and false otherwise
  */
-function isOdd(num) {
-  // Hint: See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder
-  // The _____ is meant to be "fill in the blank"
-  // Look at isZero and compare; what makes sense here?
-
-  return _____;
+const isOdd = (num) => {
+  return num % 2;
 }
 
 if (require.main === module) {
