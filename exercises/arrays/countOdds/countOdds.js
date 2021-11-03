@@ -11,12 +11,13 @@
  * @param {number[]} array - An array of numbers
  * @returns {number} The count of even integers in the array
  */
-function countOdds(array) {
-  // This is your job. :)
+const countOdds = (array) => {
+  return array.filter(num => num % 2).length;
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for countOdds:');
 }
+
 
 module.exports = countOdds;
