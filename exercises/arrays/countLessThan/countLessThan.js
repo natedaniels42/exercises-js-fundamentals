@@ -15,8 +15,8 @@
  * @param {number} threshold - The threshold for counting
  * @returns {number} The number of elements in the array less than threshold
  */
-function countLessThan(array, threshold) {
-  // This is your job. :)
+const countLessThan = (array, threshold) => {
+  return array.filter(num => num < threshhold).length;
 }
 
 if (require.main === module) {
