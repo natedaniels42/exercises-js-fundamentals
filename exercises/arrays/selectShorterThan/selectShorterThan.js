@@ -18,8 +18,8 @@
  * @returns {string[]} An array of all strings in the input array with length
  *  strictly less the given threshold
  */
-function selectShorterThan(array, threshold) {
-  // This is your job. :)
+const selectShorterThan = (array, threshold) => {
+  return array.filter(str => str.length < threshold);
 }
 
 if (require.main === module) {
