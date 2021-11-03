@@ -21,9 +21,14 @@
  * @param {number} base - The base
  * @returns {boolean} True if `num` is a power of `base` and false otherwise.
  */
-function isPowerOf(num, base) {
-  // Your code here
-  // Remember, you can assume that num is a positive integer.
+const isPowerOf = (num, base) => {
+  let current = base;
+
+  while (current < num) {
+    current *= base;
+  }
+
+  return current === num;
 }
 
 if (require.main === module) {
