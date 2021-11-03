@@ -19,9 +19,14 @@
  * @param {number} num - The number
  * @returns {boolean} True if the number is a power of 2, false otherwise.
  */
-function isPowerOfTwo(num) {
-  // Your code here
-  // Remember, you can assume that num is a positive integer.
+const isPowerOfTwo = (num) => {
+  let current = 2;
+
+  while (current < num) {
+    current *= 2;
+  }
+
+  return current === num;
 }
 
 if (require.main === module) {
