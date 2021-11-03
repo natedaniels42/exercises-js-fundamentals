@@ -14,8 +14,10 @@
  * @returns {number[]} A new array consisting of all numbers in the input array
  *   greater than the mean.
  */
-function selectAboveMean(array) {
-  // This is your job. :)
+const selectAboveMean = (array) => {
+  const mean = array.reduce((a,c) => a + c) / array.length;
+
+  return array.filter(num => num > mean);
 }
 
 if (require.main === module) {
