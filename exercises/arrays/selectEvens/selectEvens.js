@@ -13,8 +13,8 @@
  * @param {number[]} array - An array of numbers
  * @returns {number[]} A new array consisting of all the even numbers in the input array
  */
-function selectEvens(array) {
-  // This is your job. :)
+const selectEvens = (array) => {
+  return array.filter(num => num % 2 === 0);
 }
 
 if (require.main === module) {
