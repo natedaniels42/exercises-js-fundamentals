@@ -26,6 +26,19 @@
  */
 function rockPaperScissorsWinner(array) {
   // This is your job. :)
+
+  if (array[0] < array[1])
+  {
+    return "win";
+  }
+  else if (array[0] > array[1])
+  {
+    return "loss";
+  }
+  else
+  {
+    return "draw";
+  }
 }
 
 if (require.main === module) {

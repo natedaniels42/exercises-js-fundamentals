@@ -9,6 +9,8 @@
 
 function shortestWord(string) {
   // This is your job. :)
+
+  return string.split(" ").reduce((a,c)=> a.length < c.length ? a : c, "verylongstringofwordshere");
 }
 
 if (require.main === module) {
@@ -16,6 +18,8 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+  
+  console.log(shortestWord('Running sanity checks for shortestWord:'));
 }
 
 module.exports = shortestWord;
