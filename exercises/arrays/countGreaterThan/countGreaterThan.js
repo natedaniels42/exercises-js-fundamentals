@@ -15,8 +15,8 @@
  * @param {number} threshold - The threshold for counting
  * @returns {number} The number of elements in the array greater than threshold
  */
-function countGreaterThan(array, threshold) {
-  // This is your job. :)
+const countGreaterThan = (array, threshold) => {
+  return array.filter(num => num > threshhold).length;
 }
 
 if (require.main === module) {
