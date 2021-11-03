@@ -18,8 +18,8 @@
  * @param {number[]} array - An array of numbers
  * @returns {number} The mean of the numbers in the array
  */
-function mean(array) {
-  // This is your job. :)
+const mean = (array) => {
+  return array.reduce((a,c) => a + c) / array.length;
 }
 
 if (require.main === module) {
