@@ -13,16 +13,30 @@
  * @param {number} num - A positive integer
  * @returns {number[]} An array of all the prime factors of the given integer
  */
-function primeFactors(num) {
-  /*
-    Your code goes here.
+const primeFactors = (num) => {
+  //sieve of eratosthenes
+  const bools = [false, false];
+  const primes = [];
 
-    Work out one version that works and don't worry about performance.
+  for (let i = 2; i <= num; i++) {
+    bools.push(true);
+  }
 
-    If you're having trouble working it out in code, step out of JS-land
-    and use pen/paper, index cards, etc. — anything that helps you think
-    about it without getting stuck in JavaScript syntax.
-  */
+  for (let i = 0; i < bools.length; i++) {
+    if (bools[i]) {
+      for (let j = i * 2; j < bools.length; j += i) {
+        bools[j] = false;
+      }
+    }
+  }
+
+  for (let i = 0; i < bools.length; i++) {
+    if (bools[i]) {
+      primes.push(i);
+    }
+  }
+
+  return primes;
 }
 
 if (require.main === module) {

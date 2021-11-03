@@ -4,11 +4,8 @@
  * @param {number} num The input number
  * @returns {boolean} True if num is positive and false otherwise
  */
-function isPositive(num) {
-  // The _____ is meant to be "fill in the blank"
-  // Look at isZero and compare; what makes sense here?
-
-  return _____;
+const isPositive = (num) => {
+  return num > 0; 
 }
 
 if (require.main === module) {

@@ -4,7 +4,7 @@
  * @param {number} num - The input number
  * @returns {boolean} True if num is 0 and false otherwise
  */
-function isZero(num) {
+const isZero = (num) => {
   return num === 0;
 }
 

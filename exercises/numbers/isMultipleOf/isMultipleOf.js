@@ -12,12 +12,8 @@
  * @param {number} d - The potential factor
  * @returns {boolean} True if n is a multiple of d and false otherwise
  */
-function isMultipleOf(n, d) {
-  // This is your job. :)
-
-  // Consider handling two cases separately:
-  //   1. When d === 0
-  //   2. When d !== 0
+const isMultipleOf = (n, d) => {
+  return n % d === 0;
 }
 
 if (require.main === module) {

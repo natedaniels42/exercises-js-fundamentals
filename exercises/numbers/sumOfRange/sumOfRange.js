@@ -11,8 +11,14 @@
  * @param {number} rightSummand - The right integer of the range of sum
  * @returns {boolean} The sum of every integer between the two input integers, inclusive
  */
-function sumOfRange(leftSummand, rightSummand) {
-  // This is your job. :)
+const sumOfRange = (left, right) => {
+  let sum = 0;
+
+  for (let i = left; i <= right; i++) {
+    sum += i;
+  }
+
+  return sum;
 }
 
 if (require.main === module) {

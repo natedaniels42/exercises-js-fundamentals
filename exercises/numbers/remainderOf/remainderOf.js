@@ -15,13 +15,8 @@
  * @param {number} num The input number
  * @returns {boolean} True if num is even and false otherwise
  */
-function remainderOf(n, d) {
-  /*
-    This is your job. :)
-
-    If you're not sure, step out of the code and use pen + paper. Start
-    with simple examples and pay attention to the process you carry out.
-  */
+const remainderOf = (n, d) => {
+  return n % d;
 }
 
 if (require.main === module) {
