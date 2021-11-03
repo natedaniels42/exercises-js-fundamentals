@@ -33,20 +33,27 @@ const printHollowPyramid = (height) => {
   for (let i = 1; i < height; i++) {
     let left = 0;
     let right = length - 0 - 1;
-    let str;
+    let str1 = '';
+    let str2 = '';
     while (left <= right) {
-      if (left === right) {
-        str += '#';
+      if (left === right && left === i) {
+        str1 += '#';
+      } else if (left === right) {
+        str1 += ' ';
       } else if (left === i) {
-        str += '#';
-        str = '#' + str;
+        str1 += '#';
+        str2 = `#${str2}`;
       } else {
-        str += ' ';
-        str = ' ' + str;
+        str1 += ' ';
+        str2 = ` ${str2}`;
+        
       }
+      left++;
+      right--;
     }
+    arr.unshift(str1 + str2);
   }
-  console.log(arr);
+  console.log(arr.join('\n'));
 }
 
 /**
