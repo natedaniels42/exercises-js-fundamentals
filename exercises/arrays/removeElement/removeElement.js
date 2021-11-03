@@ -13,8 +13,8 @@
  * @returns {object[]} A copy of the input array with all instances of the given
  *   element removed.
  */
-function removeElement(array, element) {
-  // This is your job. :)
+const removeElement = (array, element) => {
+  return array.filter(item => item !== element);
 }
 
 if (require.main === module) {

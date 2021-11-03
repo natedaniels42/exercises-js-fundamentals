@@ -13,8 +13,8 @@
  * @returns {boolean} True if any number in the input array is positive
  *   and false otherwise.
  */
-function anyPositive(array) {
-  // This is your job. :)
+const anyPositive = (array) => {
+  return array.some(item => item > 0);
 }
 
 if (require.main === module) {

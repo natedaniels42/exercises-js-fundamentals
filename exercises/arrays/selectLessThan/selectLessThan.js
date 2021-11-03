@@ -16,8 +16,8 @@
  * @returns {number[]} A new array consisting of all the numbers in input array
  *  strictly less than the threshold
  */
-function selectLessThan(array, threshold) {
-  // This is your job. :)
+const selectLessThan = (array, threshold) => {
+  return array.filter(num => num < threshold);
 }
 
 if (require.main === module) {

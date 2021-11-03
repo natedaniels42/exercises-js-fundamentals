@@ -21,8 +21,8 @@
  * @param {object[]} rightArray - The right array to concatenate
  * @returns {object[]} The concatenation of the two given arrays
  */
-function concat(leftArray, rightArray) {
-  // This is your job. :)
+const concat = (left, right) => {
+  return left.concat(right);
 }
 
 if (require.main === module) {
@@ -31,5 +31,6 @@ if (require.main === module) {
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
 }
+
 
 module.exports = concat;

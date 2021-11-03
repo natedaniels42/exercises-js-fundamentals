@@ -18,8 +18,8 @@
  * @param {object} needle - The value to search for
  * @returns {boolean} True if the array contains the value, false otherwise.
  */
-function includes(haystack, needle) {
-  // This is your job. :)
+const includes = (haystack, needle) => {
+  return haystack.includes(needle);
 }
 
 if (require.main === module) {

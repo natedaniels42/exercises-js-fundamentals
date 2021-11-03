@@ -18,8 +18,11 @@
  * @param {number[]} array - An array of numbers
  * @returns {number} The median of the numbers in the array
  */
-function median(array) {
-  // This is your job. :)
+const median = (array) => {
+  array.sort((a,b) => a - b);
+  const length = array.length;
+
+  return length % 2 ? array[Math.floor(length / 2)] : (array[length / 2] + array[length / 2 - 1]) / 2;
 }
 
 if (require.main === module) {

@@ -6,8 +6,12 @@
  * @param {string[]} array - The input array
  * @returns {number} The shortest string in the array
  */
-function shortest(array) {
-  // This is your job. :)
+const shortest = (array) => {
+  const lengths = array.map(item => item.length);
+
+  const index = lengths.findIndex(num => num === Math.min(...lengths));
+
+  return array[index];
 }
 
 if (require.main === module) {

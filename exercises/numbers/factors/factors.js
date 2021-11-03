@@ -10,12 +10,15 @@
  * @param {number} num - A positive integer
  * @returns {number[]} An array of all the factors of the given integer
  */
-function factors(num) {
+const factors = (num) => {
   let results = [];
 
   for (let i = 1; i <= num; i++) {
     // Your code goes here. :)
     // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
+    if (num % i === 0) {
+      results.push(i);
+    }
   }
   return results;
 }

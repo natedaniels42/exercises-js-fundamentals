@@ -8,8 +8,8 @@
  * @param {number[]} array - An array of numbers
  * @returns {number} The sum of the numbers in the array
  */
-function sum(array) {
-  // This is your job. :)
+const sum = (array) => {
+  return array.reduce((a,c) => a + c);
 }
 
 if (require.main === module) {

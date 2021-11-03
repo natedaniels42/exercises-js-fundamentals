@@ -9,22 +9,22 @@
  * @param {number[]} array - The input array
  * @returns {number} The smallest element in the array
  */
-function smallest(array) {
+const smallest = (array) => {
   // The _____ on each of the lines below are meant to act
   // like a fill-in-the-blank so you can see the structure.
   //
   // Replace each _____ with some code (not all blanks) will
   // use the same code.
 
-  let _____ = _____;
+  let min = Infinity;
 
-  for (let _____ of _____) {
-    if (_____) {
-      _____ = _____;
+  for (let num of array) {
+    if (num < min) {
+      min = num;
     }
   }
 
-  return _____;
+  return min;
 }
 
 if (require.main === module) {

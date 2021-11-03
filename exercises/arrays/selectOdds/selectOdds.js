@@ -13,8 +13,8 @@
  * @param {number[]} array - An array of numbers
  * @returns {number[]} A new array consisting of all the odd numbers in the input array
  */
-function selectOdds(array) {
-  // This is your job. :)
+const selectOdds = (array) => {
+  return array.filter(num => num % 2);
 }
 
 if (require.main === module) {

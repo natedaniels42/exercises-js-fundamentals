@@ -11,8 +11,8 @@
  * @returns {string[]} A new array consisting of all the non-empty values in the
  *   input array.
  */
-function removeEmpty(array) {
-  // This is your job. :)
+const removeEmpty = (array) => {
+  return array.filter(item => item);
 }
 
 if (require.main === module) {

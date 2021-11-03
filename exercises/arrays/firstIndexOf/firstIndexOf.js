@@ -15,8 +15,8 @@
  * @returns {boolean} The index of the first occurrence of the value in the
  *  array, or -1 if it's not found.
  */
-function firstIndexOf(haystack, needle) {
-  // This is your job. :)
+const firstIndexOf = (haystack, needle) => {
+  return haystack.indexOf(needle);
 }
 
 if (require.main === module) {
