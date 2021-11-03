@@ -28,10 +28,32 @@
  * @returns {string} A lowercase copy of the input string
  */
 
+function isLetter(c)
+{
+  return c.toUpperCase() != c.toLowerCase();
+}
+
 function rot13(string) {
   // This is your job. :)
 
-  return string.split("").map(c => String.fromCharCode(c.charCodeAt() + 13)).join("");
+  let encryptedString = "";
+
+  for (let i = 0; i < string.length; i++) {
+    char = string[i];
+
+    if (isLetter(char))
+    {
+      let code = char.charCodeAt(0);
+      let shiftedChar = String.fromCharCode(code + 13)
+      encryptedString += (isLetter(shiftedChar) ? shiftedChar :String.fromCharCode( shiftedChar.charCodeAt() - 26 ));
+    }
+    else
+    {
+      encryptedString += string[i];
+    }
+  }
+
+  return encryptedString;
 }
 
 if (require.main === module) {
@@ -41,6 +63,7 @@ if (require.main === module) {
   // How else will you be sure your code does what you think it does?
 
   console.log(rot13('Running sanity checks for rot13:'));
+  console.log(rot13('Hello, world!'));
 }
 
 module.exports = rot13;
