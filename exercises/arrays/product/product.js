@@ -8,8 +8,8 @@
  * @param {number[]} array - An array of numbers
  * @returns {number} The product of the numbers in the array
  */
-function product(array) {
-  // This is your job. :)
+const product = (array) => {
+  return array.reduce((a,c) => a * c);
 }
 
 if (require.main === module) {
