@@ -6,8 +6,12 @@
  * @param {string[]} array - The input array
  * @returns {number} The longest string in the array
  */
-function longest(array) {
-  // This is your job. :)
+const longest = (array) => {
+  const lengths = array.map(item => item.length);
+
+  const index = lengths.findIndex(num => num === Math.max(...lengths));
+
+  return array[index];
 }
 
 if (require.main === module) {
