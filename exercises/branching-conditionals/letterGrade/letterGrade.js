@@ -15,6 +15,44 @@
  */
 function letterGrade(percentGrade) {
   // This is your job. :)
+
+  let grade = "";
+
+  if (percentGrade < 60)
+  {
+    return "F";
+  }
+  if (percentGrade == 100)
+  {
+    return "A+";
+  }
+  if (percentGrade > 90)
+  {
+    grade = "A";
+  }
+  else if (percentGrade > 80)
+  {
+    grade = "B";
+  }
+  else if (percentGrade > 70)
+  {
+    grade = "C";
+  }
+  else
+  {
+    grade = "D";
+  }
+
+  if (percentGrade%10 > 6)
+  {
+    grade += "+";
+  }
+  else if (percentGrade%10 < 3)
+  {
+    grade += "-";
+  }
+
+  return grade;
 }
 
 if (require.main === module) {
@@ -22,6 +60,11 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+
+  console.log(letterGrade(81));
+  console.log(letterGrade(84));
+  console.log(letterGrade(89));
+  console.log(letterGrade(61));
 }
 
 module.exports = letterGrade;

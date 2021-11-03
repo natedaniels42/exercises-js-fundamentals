@@ -30,6 +30,8 @@
 
 function rot13(string) {
   // This is your job. :)
+
+  return string.split("").map(c => String.fromCharCode(c.charCodeAt() + 13)).join("");
 }
 
 if (require.main === module) {
@@ -37,6 +39,8 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+
+  console.log(rot13('Running sanity checks for rot13:'));
 }
 
 module.exports = rot13;

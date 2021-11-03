@@ -13,6 +13,12 @@
 
 function replaceCharacters(string, replacementDict) {
   // This is your job. :)
+
+  Object.entries(replacementDict).forEach(pair => {
+    string = string.replaceAll(pair[0], pair[1]);
+  });
+
+  return string;
 }
 
 if (require.main === module) {
@@ -20,6 +26,8 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+
+  console.log(replaceCharacters('hello', { 'h': 'y', 'l': '8' }));
 }
 
 module.exports = replaceCharacters;
