@@ -11,8 +11,8 @@
  * @param {number[]} array - An array of numbers
  * @returns {number} The count of even integers in the array
  */
-function countEvens(array) {
-  // This is your job. :)
+const countEvens = (array) => {
+  return array.filter(num => num % 2 === 0).length;
 }
 
 if (require.main === module) {
