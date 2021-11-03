@@ -14,8 +14,8 @@
  * @param {object} - A value to count
  * @returns {number} The number of times the value appears in the array
  */
-function countValue(array, value) {
-  // This is your job. :)
+const countValue = (array, value) => {
+  return array.filter(num => num === value).length;
 }
 
 if (require.main === module) {
