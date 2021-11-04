@@ -20,17 +20,20 @@ let helpers = require('../printHelpers');
  *
  * @param {number} n - The size of the multiplication table to print
  */
-function printMultiplicationTable(n) {
-  /*
-    This is your job. :)
+const printMultiplicationTable = (n) => {
+  const arr = [];
 
-    Note: Getting the numbers aligned in a way that looks nice can be
-    a pain in the butt. Get one version working that prints out the
-    multiplication table without concern for alignment and then figure
-    out how to align the columns.
-  */
+  for (let i = 1; i <= n; i++) {
+    let str = '';
+    for (let j = 1; j <= n; j++) {
+      let current = ` ${i * j}`.padStart(3);
+      
+      str += current;
+    }
+    arr.push(str);
+  }
 
-  helpers.printNewLine();
+  console.log(arr.join('\n'));
 }
 
 /**
