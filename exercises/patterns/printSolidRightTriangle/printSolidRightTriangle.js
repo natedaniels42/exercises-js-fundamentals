@@ -26,20 +26,15 @@ let helpers = require('../printHelpers');
  *
  * @param {number} height - The height of the triangle to print
  */
-function printSolidRightTriangle(height) {
-  /*
-    Reflect: given `height`...
-    1. How many lines to we want to print?
-    2. How many characters should be on each line?
-  */
-  for (let i = 0; i < height; i++) {
-    // The _____ is meant to be "fill in the blank"
+const printSolidRightTriangle = (height) => {
+  const arr = [];
 
-    let numChars = _____;
+  for (let i = 1; i <= height; i++) {
+    arr.push('#'.repeat(i).padEnd(height, ' '));
 
-    helpers.printCountTimes('#', numChars);
-    helpers.printNewLine();
   }
+
+  console.log(arr.join('\n'));
 }
 
 /**
