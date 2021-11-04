@@ -31,17 +31,24 @@ let helpers = require('../printHelpers');
  * @param {number} height - The height of the plus symbol to print. It must be
  *  an odd integer.
  */
-function printPlus(height) {
-  // If height is not an odd integer, throw an error.
-  if (!Number.isInteger(height) || height % 2 !== 1) {
-    throw new Error(`height must be an odd integer, received: ${height}`);
-  }
+const printPlus = (height) => {
+  const mid = Math.floor(height / 2);
+  const arr = [];
 
   for (let i = 0; i < height; i++) {
-    // This is your job. :)
-
-    helpers.printNewLine();
+    if (i === mid) {
+      arr.push('#'.repeat(height));
+    } else {
+      let str = '#';
+      while (str.length < height) {
+        str = str.padStart(str.length + 1, ' ');
+        str = str.padEnd(str.length + 1, ' ');
+      }
+      arr.push(str);
+    }
   }
+
+  console.log(arr.join('\n'));
 }
 
 /**
